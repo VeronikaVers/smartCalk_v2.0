@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инструкция к Smart_Calc_v2.0</title>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      min-width: 320px;
+
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .header {
+      margin-bottom: 50px;
+    }
+
+    .header_container {
+      padding: 15px 0;
+    }
+
+    .header_title {
+      margin: 0;
+      text-align: center;
+      font-size: 48px;
+    }
+
+    .section_title {
+      margin: 0;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .box_title {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .actions_content {
+      justify-content: center;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header_container">
+      <h1 class="header_title">Инструкция к SmartCalc_v2.0</h1>
+    </div>
+  </header>
+  <section class="usage">
+    <div class="container">
+      <h2 class="section_title">Использование:</h2>
+      <p class="section_descr">
+        Установка SmartCalc_v2.0 осуществляется при помощи Makefile из папки src.
+      </p>
+      <div class="usage_content content">
+        <div class="usage_box box install">
+          <h3 class="box_title">Установка:</h3>
+          <ol>
+            <li>Вызвать цель
+              <i>make install</i> из папки src.
+            </li>
+            <li>Дождаться установки.</li>
+          </ol>
+        </div>
+        <div class="usage_box box dist">
+          <h3 class="box_title">Сборка в архив:</h3>
+          <ol>
+            <li>Вызвать цель <i>make dist</i> из папки src.</li>
+            <li>Архив собирается в папку <i>src</i>.</li>
+          </ol>
+        </div>
+
+        <div class="usage_box box uninstall">
+          <h3 class="box_title">Удаление:</h3>
+          <ol>
+            <li>Вызвать цель <i>make uninstall</i> из папки src.</li>
+            <li>Дождаться удаления&nbsp;.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="open">
+    <div class="container">
+      <h2 class="sectioin_title">Запуск и использование:</h2>
+      <ol>
+        <li>Для запуска приложения открыть исполняемый файл build/SmartCalc_v2_0.app, либо
+          через терминал командой &quot;open build/SmartCalc_v2_0.app&quot;</li>
+        <li>Для вычисления: ввести выражение в поле и нажать на кнопку &quot;=&quot;.</li>
+        <li>Для вычисления выражения с использованием переменной <i>x</i> необходимо ввести <i>x</i>
+          при помощи соответствующей кнопки и ввести в поле числовое значение <i>x</i></li>
+        <li>Для построения графика: нажать кнопку &quot;graph&quot;, ввести выражение в поле 
+          и нажать на кнопку &quot;BUILD&quot;.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="actions">
+    <div class="container">
+      <h2 class="sectioin_title">Доступные действия:</h2>
+      <p class="section_descr">
+        Вычисление произвольных скобочных арифметических выражений в инфиксной нотации с
+        подстановкой значения
+        переменной <i>x</i> в виде числа.
+      </p>
+      <div class="actions_content content">
+        <div class="actions_box box">
+          <h3 class="box_title">Арифметические операторы:</h3>
+          <ol>
+            <li>Скобки: <i>(a + b)</i></li>
+            <li>Сложение: <i>a + b</i></li>
+            <li>Вычитание: <i>a - b</i></li>
+            <li>Умножение: <i>a * b</i></li>
+            <li>Деление: <i>a / b</i></li>
+            <li>Возведение в степень: <i>a ^ b</i></li>
+            <li>Остаток от деления: <i>a mod b</i></li>
+            <li>Унарный плюс: <i>+a</i></li>
+            <li>Унарный минус: <i>-a</i></li>
+          </ol>
+        </div>
+
+        <div class="actions_box box">
+          <h3 class="box_title">Функции:</h3>
+          <ol>
+            <li>Косинус: <i>cos(x)</i></li>
+            <li>Синус: <i>sin(x)</i></li>
+            <li>Тангенс: <i>tan(x)</i></li>
+            <li>Арк косинус: <i>acos(x)</i></li>
+            <li>Арк синус: <i>asin(x)</i></li>
+            <li>Арк тангенс: <i>atan(x)</i></li>
+            <li>Квадратный корень: <i>sqrt(x)</i></li>
+            <li>Натуральный логарифм: <i>ln(x)</i></li>
+            <li>Десятичный логарифм: <i>log(x)</i></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <hr>
+      <p style="text-align: center;">Smart_Calc_v2.0 &copy</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
